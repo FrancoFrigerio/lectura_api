@@ -15,28 +15,11 @@ const Pokemons = () => {
     
     
     return (
-        <div className="row">
+        <div className="row container-fluid px-5 mt-3">
            <div className="col-md-6">
             <h3>Lista de Pokemones</h3>
                
-                <hr/>
-              <div className="d-flex justify-content-between">
-              {
-                    pokemones.length === 0 &&
-                    <button onClick={()=>dispatch(obtenerPokemonesAccion())} className="btn btn-outline-dark btn-sm">Obtener</button>
-                    
-               } 
-               
-               {
-                   next &&
-                <button onClick={()=>dispatch(Siguientes())} className="btn btn-dark btn-sm">Siguientes</button>
-               }
-               {
-                   previous &&
-                    <button onClick={()=>dispatch(Anteriores())} className="btn btn-dark btn-sm">Anteriores</button>
-               }
-              </div>
-                <ul className="list-group mt-3">
+            <ul className="list-group mt-3">
                      {
                          pokemones.map((e,index)=><li className="list-group-item text-uppercase" 
                          key={index}>
@@ -46,6 +29,23 @@ const Pokemons = () => {
                         </li>)
                      }
                 </ul>
+              <div className="d-flex justify-content-between mt-3 px-3">
+              {
+                pokemones.length === 0 &&
+                <button onClick={()=>dispatch(obtenerPokemonesAccion())} className="btn btn-outline-dark btn-sm">Obtener</button>
+               } 
+               
+               {
+                   previous &&
+                    <button onClick={()=>dispatch(Anteriores())} className="btn btn-outline-secondary btn-sm">Anteriores</button>
+               }
+               
+               {
+                   next &&
+                <button onClick={()=>dispatch(Siguientes())} className="btn btn-dark btn-sm">Siguientes</button>
+               }
+              </div>
+                
            </div>
             <div className="col-md-6">
                <h3> Detalle de un pokemon</h3>

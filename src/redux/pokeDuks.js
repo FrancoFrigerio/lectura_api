@@ -79,7 +79,7 @@ export const obtenerPokemonesAccion =()=>async(dispatch , getState)=>{
         })
     }else{
         try{
-            const res = await axios.get(`https://pokeapi.co/api/v2/pokemon?offset=0&limit=20`)
+            const res = await axios.get(`https://pokeapi.co/api/v2/pokemon?offset=0&limit=10`)
             console.log('desde la api')
             localStorage.setItem('offset=0', JSON.stringify(res.data))
             dispatch({
