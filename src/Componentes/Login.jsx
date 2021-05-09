@@ -12,18 +12,19 @@ const Login = (props) => {
 
     
         useEffect(() => {
+            
        const redireccionar =()=>{
         console.log(activo)   
         if(activo){
             props.history.push('/')
-           }
-           return
+        }
+        return
        }
         redireccionar()
     }, [activo])
     return (
         <div className="container mt-5 text-center">
-            <h3>Ingreso con Google</h3>
+            <h3>Ingreso con cuenta de Google</h3>
             <hr className="text-primary mt-5"/>
            
            {

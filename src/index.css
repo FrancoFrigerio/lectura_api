@@ -11,3 +11,16 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+#formFileSm{
+  display: none;
+}
+#cam{
+  font-size: 1.5rem;
+  font-weight: 100;
+}
+.foto{
+  border-radius: 50%;
+}
+.span{
+  font-weight: 400;
+}

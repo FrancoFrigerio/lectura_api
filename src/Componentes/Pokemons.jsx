@@ -15,7 +15,7 @@ const Pokemons = () => {
     
     
     return (
-        <div className="row container-fluid px-5 mt-3">
+        <div className="row container-fluid px-5 my-5">
            <div className="col-md-6">
             <h3>Lista de Pokemones</h3>
                

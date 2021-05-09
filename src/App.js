@@ -4,6 +4,7 @@ import {BrowserRouter as Router, Switch, Route , Redirect} from "react-router-do
 import Login from './Componentes/Login';
 import Navbar from './Componentes/Navbar';
 import {auth,firebase} from './firebase'
+import Perfil from './Componentes/Perfil';
 
 const App =()=> {
   const [firebaseUser, setFirebaseUser] = useState(false)
@@ -20,7 +21,7 @@ const App =()=> {
    }
    fetchUser()
     
-  }, [])
+  }, [])    
    const PrivateRoute =({component, path, ...rest})=>{
       if(localStorage.getItem('usuario')){
           const userLocal = JSON.parse(localStorage.getItem('usuario'))
@@ -39,6 +40,7 @@ const App =()=> {
        <Navbar></Navbar>
        <Switch>
          <PrivateRoute component={Pokemons}  path="/"exact={true}/>
+         <PrivateRoute component={Perfil}  path="/perfil"exact={true}/>
          <Route component={Login} exact path="/login"/>
         
           

@@ -7,26 +7,36 @@ const Navbar = (props) => {
     
     const dispatch = useDispatch()
     const {Usuario} = useSelector(store => store.usuario)
+    
     const cerrarSession =()=>{
        dispatch(closeSession())
        props.history.push('/login')
        
-   }
+    }
     return (
-        <div className="navbar navbar-dark bg-secondary">
-            <Link className="navbar-brand mx-3" to="/">APP POKE</Link>
-            <div className="d-flex">
-               {
-                   Usuario == null?
-                   (<NavLink className="btn btn-dark mx-1" to="/login" exact>Login</NavLink>
-                    ):
-                    (<>
-                        <button className="btn btn-dark mx-2" onClick={()=>cerrarSession()}>Cerrar Session</button>
-                        <NavLink className="btn btn-dark mx-2" to="/" exact>Inicio</NavLink>
-                    </>)
-                }
+        <div className="navbar navbar-dark bg-secondary px-2">
+          <div>
+                <Link className="navbar-brand mx-3" to="/">APP POKE</Link>
+          </div>
+          
+            <div className="d-flex flex-direction-row"> 
+                    <div className="d-flex align-items-center">
+                        {
+                        Usuario == null?
+                        (<NavLink className="btn btn-dark mx-3" to="/login" exact>Login</NavLink>
+                            ):
+                            (<div className="d-flex flex-direction-row">
+                                <NavLink className="btn btn-dark btn-sm mx-1" to="/perfil" exact>Perfil</NavLink>
+                                <NavLink className="btn btn-dark btn-sm mx-1" to="/" exact>Inicio</NavLink>
+                                <button className="btn btn-dark mx-1 btn-sm" onClick={()=>cerrarSession()}>Cerrar Session</button>
+                            </div>)
+                        }
+                
+                    </div> 
+                    
             </div>
         </div>
+       
     )
 }
 

@@ -33,11 +33,6 @@ export default function pokeReducer(state=dataInicial , action){
 
 //acciones
 export const detallePokemon =(url = 'https://pokeapi.co/api/v2/pokemon/1/')=>async(dispatch)=>{
-        
-        // if(url == undefined){
-        //     url='https://pokeapi.co/api/v2/pokemon/1/'
-        // }
-            
         if(localStorage.getItem(url)){
             console.log('desde el local')
             dispatch({
@@ -47,9 +42,8 @@ export const detallePokemon =(url = 'https://pokeapi.co/api/v2/pokemon/1/')=>asy
             }) 
             return
         }
-        
-        try{
-        const res = await axios.get(url)
+          try{
+           const res = await axios.get(url)
            console.log(res.data) 
            dispatch({
                type: OBTENER_INFO_POKE,
