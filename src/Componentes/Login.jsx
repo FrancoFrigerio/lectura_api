@@ -23,7 +23,8 @@ const Login = (props) => {
         redireccionar()
     }, [activo])
     return (
-        <div className="container mt-5 text-center">
+        <div id="cont_Login" >
+            <div className="container mt-5 text-center">
             <h3>Ingreso con cuenta de Google</h3>
             <hr className="text-primary mt-5"/>
            
@@ -45,6 +46,13 @@ const Login = (props) => {
                 >Acceder </button>
             }
             
+            </div>
+            <div className="text-center mt-5 d-flex justify-content-center">
+                <div className="col-6 pt-5 text-white fw-bold">
+                        <p>Esto es una simple App Web en la que muestro pokemones y sus caracteristicas...</p>
+                            <p>Para ingresar debes loguearte con una cuenta Google</p>
+                    </div>
+             </div>
         </div>
     )
 }

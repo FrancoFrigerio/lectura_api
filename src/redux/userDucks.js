@@ -115,31 +115,7 @@ export const updateUser =(user)=> async(dispatch ,getState)=>{
         }catch(error){
             console.log(error)
         }
-    //   try {
-    //      auth.onAuthStateChanged(usuario =>{
-    //          if(usuario && user){
-    //              db.collection('usuarios').doc(usuario.email).update({displayName:user})
-    //             const userUpdate ={
-    //                 uid:usuario.uid,
-    //                 email:usuario.email,
-    //                 displayName:user,
-    //                 photoURL:usuario.photoURL
-    //             }
-    //              dispatch({
-    //                 type:UPDATE_USER,
-    //                 payload:userUpdate
-    //             })
-    //             localStorage.setItem('usuario' , JSON.stringify(userUpdate))
-                
-    //          }else{
-    //              console.log('no existe usuario')
-    //          }
-           
-    //      })
-
-    //   } catch (error) {
-        
-    //   }
+    
 }
 export const updateImage =(img)=> async(dispatch,getState)=>{
     dispatch({

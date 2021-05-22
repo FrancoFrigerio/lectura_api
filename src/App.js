@@ -5,6 +5,7 @@ import Login from './Componentes/Login';
 import Navbar from './Componentes/Navbar';
 import {auth,firebase} from './firebase'
 import Perfil from './Componentes/Perfil';
+import ListadoPokemones from './Componentes/ListadoPokemones';
 
 const App =()=> {
   const [firebaseUser, setFirebaseUser] = useState(false)
@@ -37,15 +38,17 @@ const App =()=> {
  return firebaseUser !== false? (
     <Router>
       <div className="App">
-       <Navbar></Navbar>
-       <Switch>
-         <PrivateRoute component={Pokemons}  path="/"exact={true}/>
-         <PrivateRoute component={Perfil}  path="/perfil"exact={true}/>
-         <Route component={Login} exact path="/login"/>
-        
-          
+        <div className="App">
+          <Navbar></Navbar>
          
-       </Switch>
+          <Switch>
+            <PrivateRoute component={Pokemons}  path="/"exact={true}/>
+            <PrivateRoute component={ListadoPokemones} path="/listado" exact={true}/>         
+            <PrivateRoute component={Perfil}  path="/perfil"exact={true}/>
+            <Route component={Login} path="/login" exact={true}/>
+          </Switch>
+          
+        </div>
       </div>
     </Router>
   ):(<div>Cargando...</div>)

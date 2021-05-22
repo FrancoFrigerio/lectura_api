@@ -18,9 +18,88 @@ code {
   font-size: 1.5rem;
   font-weight: 100;
 }
+#cont_Login{
+  height: 100vh;
+  
+}
+.App{
+  /* height: 100%; */
+  min-height: 100vh;
+  background-color: rgb(57, 58, 92);
+}
 .foto{
   border-radius: 50%;
 }
 .span{
   font-weight: 400;
 }
+
+/* tarjeta de pokemon */
+.cont_border{
+  color: #fff;
+  font-weight: 500;
+  text-align: center;
+  border-radius: 1.5%;
+  border: solid .5px;
+}
+.borderGeneric{
+  background: linear-gradient(to top, #4b0280bd,#a21ddcba, #5c21e4a3);
+  box-shadow: 0px 0px 25px 8px rgba(137, 48, 238, 0.66);
+  border-color:rgb(106, 0, 255);
+}
+.borderFire{
+  background: linear-gradient(to top, #ff1010a9,#e9a30bba, #ffab1997);
+  box-shadow: 0px 0px 25px 8px rgba(244, 68, 19, 0.411);
+  border-color:rgb(255, 162, 0);
+}
+.borderGrass{
+  background: linear-gradient(to top, #0b7901bd,#3ccd10ba, #bad50c7e);
+  box-shadow: 0px 0px 25px 8px rgba(112, 244, 24, 0.66);
+  border-color:rgba(136, 255, 0, 0.619);
+}
+.borderWater{
+  background: linear-gradient(to top, #06159fbd,#144ebaba, #00e1d67e);
+  box-shadow: 0px 0px 25px 8px rgba(27, 108, 247, 0.66);
+  border-color:rgb(0, 255, 60);
+}
+.borderPoison{
+  background: linear-gradient(to top, #e60278bd,#bb19d0bf, #7800e17e);
+  box-shadow: 0px 0px 25px 8px rgba(176, 18, 255, 0.66);
+  border-color:rgb(157, 0, 255);
+}
+.borderFlying{
+  background: linear-gradient(to top, #067e9fbd,#17d5c2ba, #00e1a57e);
+  box-shadow: 0px 0px 25px 8px rgba(34, 184, 239, 0.66);
+  border-color:rgb(0, 255, 251);
+}
+.borderElectric{
+  background: linear-gradient(to top, rgba(233, 200, 15, 0.877),rgb(228, 210, 15), rgba(240, 240, 13, 0.801));
+  box-shadow: 0px 0px 25px 8px rgba(231, 231, 14, 0.831);
+  border-color:rgb(242, 255, 0);
+}
+.borderGround{
+  background: linear-gradient(to top, rgba(105, 60, 5, 0.733),rgb(167, 104, 9), rgba(252, 146, 16, 0.747));
+  box-shadow: 0px 0px 25px 8px rgba(231, 151, 14, 0.831);
+  border-color:rgb(255, 162, 0);
+}
+.borderRock{
+  background: linear-gradient(to top, rgba(26, 19, 2, 0.907),rgb(75, 66, 46), rgba(97, 80, 56, 0.747));
+  box-shadow: 0px 0px 25px 8px rgba(92, 74, 39, 0.831);
+  border-color:rgb(99, 85, 17);
+}
+.img_poke{
+ height: 200px;
+}
+.barra{
+  background: rgb(80, 99, 105)
+}
+.cont_atributos{
+  border-radius: 2%;
+  background-color: rgba(201, 201, 201, 0.585);
+}
+.cont_atributos span{
+  margin-left: 1%;
+  color: rgb(255, 255, 255);
+}
+
+

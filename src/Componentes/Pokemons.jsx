@@ -15,15 +15,15 @@ const Pokemons = () => {
     
     
     return (
-        <div className="row container-fluid px-5 my-5">
+        <div className="row container-fluid px-5 mt-2 pb-3">
            <div className="col-md-6">
-            <h3>Lista de Pokemones</h3>
+            <h3 className="shadow-sm p-3 mb-5 bg-transparent rounded text-white">Lista de Pokemones</h3>
                
-            <ul className="list-group mt-3">
+            <ul className="list-group mt-3 bg-transparent">
                      {
-                         pokemones.map((e,index)=><li className="list-group-item text-uppercase" 
+                         pokemones.map((e,index)=><li className="list-group-item text-uppercase bg-transparent border" 
                          key={index}>
-                             {e.name}
+                             <span className="text-white">{e.name}</span>
                              <button onClick={()=>dispatch(detallePokemon(e.url))}
                              className="btn btn-outline-info btn-sm float-end">Info</button>
                         </li>)
@@ -48,12 +48,12 @@ const Pokemons = () => {
                 
            </div>
             <div className="col-md-6">
-               <h3> Detalle de un pokemon</h3>
+               <h3 className="shadow-sm p-3 mb-5 bg-body rounded bg-transparent text-white"> Detalle de un pokemon</h3>
                      <div>
                          <Poke></Poke>
                      </div>
                 
-                     {/* {(event)=> setPoke(e)} */}
+                    
                 
             </div>
         </div>

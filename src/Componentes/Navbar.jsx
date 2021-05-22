@@ -26,6 +26,7 @@ const Navbar = (props) => {
                         (<NavLink className="btn btn-dark mx-3" to="/login" exact>Login</NavLink>
                             ):
                             (<div className="d-flex flex-direction-row">
+                                <NavLink className="btn btn-dark btn-sm mx-1" to="/listado" exact>Pokemones...!!</NavLink>
                                 <NavLink className="btn btn-dark btn-sm mx-1" to="/perfil" exact>Perfil</NavLink>
                                 <NavLink className="btn btn-dark btn-sm mx-1" to="/" exact>Inicio</NavLink>
                                 <button className="btn btn-dark mx-1 btn-sm" onClick={()=>cerrarSession()}>Cerrar Session</button>

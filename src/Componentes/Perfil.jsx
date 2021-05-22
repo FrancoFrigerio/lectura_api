@@ -57,7 +57,7 @@ const Perfil = () => {
     return Usuario !==null ?(
         
         <div className="mt-5 text-center">
-            <div className="card">
+            <div className="card bg-transparent">
             {
                 loading ? (
                     <div className="d-flex justify-content-center">
@@ -94,12 +94,8 @@ const Perfil = () => {
                             </div>
                         </div>
                     </div>
-
-
-                 {/* <i className='bx bx-camera mt-1 text-info'></i> */}
-                    
-                    <h5 className="card-title">Nombre: {Usuario.displayName}</h5> 
-                    <p className=" card-text">correo electronico: {Usuario.email}</p>
+                    <h5 className="card-title text-white">Nombre: {Usuario.displayName}</h5> 
+                    <p className=" card-text text-secondary">correo electronico: {Usuario.email}</p>
                     {
                         edit&&
                     <div className="d-flex justify-content-center mb-2">
